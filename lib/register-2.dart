@@ -34,7 +34,7 @@ class Register2 extends StatelessWidget {
               Container(
               
                 alignment: Alignment.bottomLeft,
-                child: Text("E-mail address", style: TextStyle(fontSize: 12,  color: Color.fromARGB(136, 158, 158, 158),), ),
+                child: Text("E-mail address", style: TextStyle(fontSize: 12,  color: Color(0xFF666680),), ),
               ),
               SizedBox(height: 5),
               Column(
@@ -71,7 +71,7 @@ class Register2 extends StatelessWidget {
                    Container(
               
                 alignment: Alignment.bottomLeft,
-                child: Text("Password", style: TextStyle(fontSize: 12,  color: Color.fromARGB(136, 158, 158, 158),), ),
+                child: Text("Password", style: TextStyle(fontSize: 12,  color: Color(0xFF666680),), ),
               ),
               SizedBox(height: 5),
                Container(
@@ -109,7 +109,7 @@ class Register2 extends StatelessWidget {
                        
                        width: MediaQuery.of(context).size.width/4.5,
                        height: 5,
-                       color: Colors.grey[800],
+                       color: Color(0xFF666680),
                      ),
                      SizedBox(
                        width: 5,
@@ -117,7 +117,7 @@ class Register2 extends StatelessWidget {
                      Container(
                        width: MediaQuery.of(context).size.width/4.5,
                        height: 5,
-                       color: Colors.grey[800],
+                       color: Color(0xFF666680),
                      ),
                       SizedBox(
                       
@@ -126,7 +126,7 @@ class Register2 extends StatelessWidget {
                      Container(
                        width: MediaQuery.of(context).size.width/4.5,
                        height: 5,
-                       color: Colors.grey[800],
+                       color: Color(0xFF666680),
                      ),
                       SizedBox(
                        width: 5,
@@ -134,7 +134,7 @@ class Register2 extends StatelessWidget {
                      Container(
                        width: MediaQuery.of(context).size.width/4.64,
                        height: 5,
-                       color: Colors.grey[800],
+                       color: Color(0xFF666680),
                      ),
                    ],
                  ),
@@ -144,7 +144,7 @@ class Register2 extends StatelessWidget {
                  Container(
                   margin: EdgeInsets.only(right: 20),
                   child: Text("""     Use 8 0r more characters with a mix of letters,     
-     Numbers and symbols""",  textAlign: TextAlign.start, style: TextStyle(color: Colors.grey[700]),),
+     Numbers and symbols""",  textAlign: TextAlign.start, style: TextStyle(color: Color(0xFF666680)),),
                 ),
                 SizedBox(
                   height: 50

@@ -1,3 +1,5 @@
+import 'package:demo_applications/new_subscription.dart';
+import 'package:demo_applications/subscription_info.dart';
 import 'package:demo_applications/tab1.dart';
 import 'package:demo_applications/tab2.dart';
 import 'package:flutter/material.dart';
@@ -114,11 +116,17 @@ class _YourSubsState extends State<YourSubs> with SingleTickerProviderStateMixin
            color: Colors.white,
            
          ),
-         onPressed: (){},
+         onPressed: (){
+           
+                     Navigator.push(context,
+MaterialPageRoute(builder: (context) => NewSubscription())
+      );
+                  
+         },
        ),
        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
        bottomNavigationBar: BottomAppBar(
-         color: Colors.grey[800],
+         color: Color(0xFF4E4E61),
          shape: CircularNotchedRectangle(),
      notchMargin: 10,
      child: Container(
@@ -142,7 +150,7 @@ children: [
       children: [
         Icon(
           Icons.home,
-          color: currentTab == 0 ? Colors.white : Colors.grey[700]
+          color: Colors.white
         )
       ],
     ),
@@ -160,7 +168,7 @@ MaterialPageRoute(builder: (context) =>SpendingsAndBudgets())
       children: [
         Icon(
           Icons.menu,
-          color: currentTab == 1 ? Colors.white : Colors.grey[700]
+          color: Colors.white
         )
       ],
     ),
@@ -174,7 +182,7 @@ children: [
     minWidth: 40,
     onPressed: () {
       Navigator.push(context,
-MaterialPageRoute(builder: (context) => Settings())
+MaterialPageRoute(builder: (context) => Calender())
       );
   
     },
@@ -183,7 +191,7 @@ MaterialPageRoute(builder: (context) => Settings())
       children: [
         Icon(
           Icons.calendar_view_day_sharp,
-          color: currentTab == 2 ? Colors.white : Colors.grey[700]
+          color: Colors.white
         )
       ],
     ),
@@ -201,7 +209,7 @@ MaterialPageRoute(builder: (context) => Profile())
       children: [
         Icon(
           Icons.credit_card,
-          color: currentTab == 3 ? Colors.white : Colors.grey[700]
+          color: Colors.white
         )
       ],
     ),

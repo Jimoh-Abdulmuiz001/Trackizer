@@ -1,6 +1,8 @@
 import 'package:demo_applications/home_yoursubs.dart';
+import 'package:demo_applications/new_subscription.dart';
 import 'package:demo_applications/page/calender.dart';
 import 'package:demo_applications/page/credit_cards.dart';
+import 'package:demo_applications/settings.dart';
 import 'package:flutter/material.dart';
 
 import 'package:dotted_border/dotted_border.dart';
@@ -42,11 +44,19 @@ class _SpendingsAndBudgetsState extends State<SpendingsAndBudgets> {
                   
                
                  
-                  Container(
-                
-                    child: Icon(
-                      Icons.settings,
-                      
+                  GestureDetector(
+                  onTap: (){
+                     Navigator.push(context,
+MaterialPageRoute(builder: (context) => Settings())
+      );
+                  },
+                    child: Container(
+                                  
+                      child: Icon(
+                        
+                        Icons.settings,
+                        
+                      ),
                     ),
                   )
                 ],
@@ -237,16 +247,16 @@ class _SpendingsAndBudgetsState extends State<SpendingsAndBudgets> {
                       children: [
                         Container(
                           padding: EdgeInsets.fromLTRB(20, 15, 0, 0),
-                          width: 83,
+                          width: 135,
                           height: 3,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(3),
-                            color: Colors.greenAccent
+                            color: Color(0xFFFFA699)
                           ),
                         ),
                          Container(
                           padding: EdgeInsets.fromLTRB(20, 15, 0, 0),
-                          width: 200,
+                          width: 159,
                           height: 3,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(3),
@@ -322,16 +332,16 @@ class _SpendingsAndBudgetsState extends State<SpendingsAndBudgets> {
                       children: [
                         Container(
                           padding: EdgeInsets.fromLTRB(20, 15, 0, 0),
-                          width: 83,
+                          width: 237,
                           height: 3,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(3),
-                            color: Colors.greenAccent
+                            color: Color(0xFFAD7BFF)
                           ),
                         ),
                          Container(
                           padding: EdgeInsets.fromLTRB(20, 15, 0, 0),
-                          width: 200,
+                          width: 57,
                           height: 3,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(3),
@@ -399,11 +409,16 @@ class _SpendingsAndBudgetsState extends State<SpendingsAndBudgets> {
            color: Colors.white,
            
          ),
-         onPressed: (){},
+         onPressed: (){
+           
+                     Navigator.push(context,
+MaterialPageRoute(builder: (context) => NewSubscription())
+      );
+         },
        ),
        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
        bottomNavigationBar: BottomAppBar(
-         color: Colors.grey[800],
+         color: Color(0xFF4E4E61),
          shape: CircularNotchedRectangle(),
      notchMargin: 10,
      child: Container(
@@ -426,7 +441,7 @@ MaterialPageRoute(builder: (context) => YourSubs())
       children: [
         Icon(
           Icons.home,
-          color: currentTab == 0 ? Colors.white : Colors.grey[700]
+          color: Colors.white
         )
       ],
     ),
@@ -443,7 +458,7 @@ MaterialPageRoute(builder: (context) => YourSubs())
       children: [
         Icon(
           Icons.menu,
-          color: currentTab == 1 ? Colors.white : Colors.grey[700]
+          color: Colors.white
         )
       ],
     ),
@@ -457,7 +472,7 @@ children: [
     minWidth: 40,
     onPressed: () {
       Navigator.push(context,
-MaterialPageRoute(builder: (context) => Settings())
+MaterialPageRoute(builder: (context) => Calender())
       );
     },
     child: Column(
@@ -465,7 +480,7 @@ MaterialPageRoute(builder: (context) => Settings())
       children: [
         Icon(
           Icons.calendar_view_day_sharp,
-          color: currentTab == 2 ? Colors.white : Colors.grey[700]
+          color: Colors.white
         )
       ],
     ),
@@ -482,7 +497,7 @@ MaterialPageRoute(builder: (context) => Profile())
       children: [
         Icon(
           Icons.credit_card,
-          color: currentTab == 3 ? Colors.white : Colors.grey[700]
+        color: Colors.white
         )
       ],
     ),

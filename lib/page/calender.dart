@@ -1,19 +1,21 @@
 import 'package:demo_applications/home_yoursubs.dart';
+import 'package:demo_applications/new_subscription.dart';
 import 'package:demo_applications/page/credit_cards.dart';
 import 'package:demo_applications/page/spending_budgets.dart';
+import 'package:demo_applications/settings.dart';
 import 'package:flutter/material.dart';
 
 
-class Settings extends StatefulWidget {
-  const Settings({ Key? key }) : super(key: key);
+class Calender extends StatefulWidget {
+  const Calender({ Key? key }) : super(key: key);
 
   @override
-  State<Settings> createState() => _SettingsState();
+  State<Calender> createState() => _CalenderState();
 }
 
-class _SettingsState extends State<Settings> {
+class _CalenderState extends State<Calender> {
   int currentTab = 0;
-  Widget currentScreen = Settings();
+  Widget currentScreen = Calender();
   @override
   Widget build(BuildContext context) {
    return Scaffold(
@@ -40,11 +42,18 @@ class _SettingsState extends State<Settings> {
                     
                  
                    
-                    Container(
-                  
-                      child: Icon(
-                        Icons.settings,
-                        
+                    GestureDetector(
+                      onTap: (){
+                               Navigator.push(context,
+MaterialPageRoute(builder: (context) => Settings())
+      );
+                      },
+                      child: Container(
+                                      
+                        child: Icon(
+                          Icons.settings,
+                          
+                        ),
                       ),
                     )
                   ],
@@ -89,7 +98,7 @@ class _SettingsState extends State<Settings> {
                     Container(
                       child: Text(
                         "01/08/2022", style: TextStyle(
-                          color: Colors.grey[900],
+                          color: Color(0xFFA2A2B5),
                           fontSize: 12
                         ),
                       ),
@@ -98,7 +107,7 @@ class _SettingsState extends State<Settings> {
                      Container(
                       child: Text(
                         r"in upcoming bills", style: TextStyle(
-                          color: Colors.grey[900],
+                          color:    Color(0xFFA2A2B5),
                           fontSize: 12
                         ),
                       ),
@@ -240,7 +249,7 @@ class _SettingsState extends State<Settings> {
                               ),
                               Container(
                                 padding: EdgeInsets.only(left: 20),
-                                child: Text("Youtube Premium", style: TextStyle(
+                                child: Text("OneDrive", style: TextStyle(
                                   fontSize: 14,
                                   color: Colors.white
                                 ),),
@@ -274,11 +283,16 @@ class _SettingsState extends State<Settings> {
            color: Colors.white,
            
          ),
-         onPressed: (){},
+         onPressed: (){
+           
+                     Navigator.push(context,
+MaterialPageRoute(builder: (context) => NewSubscription())
+      );
+         },
        ),
        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
        bottomNavigationBar: BottomAppBar(
-         color: Colors.grey[800],
+         color: Color(0xFF4E4E61),
          shape: CircularNotchedRectangle(),
      notchMargin: 10,
      child: Container(
@@ -301,7 +315,7 @@ MaterialPageRoute(builder: (context) => YourSubs())
       children: [
         Icon(
           Icons.home,
-          color: currentTab == 0 ? Colors.white : Colors.grey[700]
+          color: Colors.white
         )
       ],
     ),
@@ -318,7 +332,7 @@ MaterialPageRoute(builder: (context) => SpendingsAndBudgets())
       children: [
         Icon(
           Icons.menu,
-          color: currentTab == 1 ? Colors.white : Colors.grey[700]
+         color: Colors.white
         )
       ],
     ),
@@ -340,7 +354,7 @@ children: [
       children: [
         Icon(
           Icons.calendar_view_day_sharp,
-          color: currentTab == 2 ? Colors.white : Colors.grey[700]
+         color: Colors.white
         )
       ],
     ),
@@ -360,7 +374,7 @@ MaterialPageRoute(builder: (context) => Profile())
       children: [
         Icon(
           Icons.credit_card,
-          color: currentTab == 3 ? Colors.white : Colors.grey[700]
+         color: Colors.white
         )
       ],
     ),
